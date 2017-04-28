@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
 
     std::string line = "yolo";
-    Bloom bloomFilter(2000000);
+    Bloom bloomFilter(5000000);
     if (myfile.is_open())
     {
         while (getline(myfile, line))

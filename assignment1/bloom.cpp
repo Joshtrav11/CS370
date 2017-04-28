@@ -47,7 +47,7 @@ bool Bloom::check(std::string item, bool add) {
     sha1_32a(&item, item.length(), seed, &result3);
 	result3 = result3 % size;
     result4 = (MurmurHash2(&item, item.length(), seed) % size);
-    MurmurHash3_x86_32( &item, item.length(), seed, &result5);
+	MurmurHash3_x86_32( &item, item.length(), seed, &result5);
 	result5 = result5 % size;
 
 	if(table[result1] == true) {
